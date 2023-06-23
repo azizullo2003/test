@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:animated_custom_dropdown/custom_dropdown.dart';
 import 'package:animated_toggle_switch/animated_toggle_switch.dart';
@@ -94,7 +93,7 @@ class _RatesScreenState extends State<RatesScreen> {
                           listItemStyle: theme.textTheme.labelMedium,
                           hintStyle: theme.textTheme.labelMedium,
                           fillColor: Constants.transparentColor,
-                          borderRadius: BorderRadius.all(Radius.circular(100)),
+                          borderRadius: const BorderRadius.all(Radius.circular(100)),
                           items: dropdownList,
                           controller: dropdownController,
                         ),
@@ -106,7 +105,7 @@ class _RatesScreenState extends State<RatesScreen> {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 400,
           child: Placeholder(),
         )

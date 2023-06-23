@@ -1,6 +1,4 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:introduction_screen/introduction_screen.dart';
 
 class GradientAppBar extends StatelessWidget {
   final String title;
@@ -30,7 +28,7 @@ class GradientAppBar extends StatelessWidget {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            Color.fromRGBO(32, 241, 192, 1),
+            Color.fromRGBO(53, 238, 191, 1.0),
             Color.fromRGBO(60, 193, 179, 1)
           ],
         ),
@@ -38,19 +36,20 @@ class GradientAppBar extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-            top: 40,
+            top: 55,
             left: 0,
             right: 0,
             child: Center(
               child: Text(
                 title,
-                style: theme.textTheme.labelLarge,
+
+                style: const TextStyle(fontSize: 15.0, fontWeight: FontWeight.w500, color: Colors.white),
               ),
             ),
           ),
           Positioned(
-            top: 30,
-            right: 5,
+            top: 40,
+            right: 12,
             child: actions == null ? const SizedBox.shrink() : actions!,
           ),
           Positioned(

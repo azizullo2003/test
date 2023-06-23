@@ -30,13 +30,13 @@ class _BottomBarState extends State<BottomBar> {
             ),
           ],
         ),
-        height: 70,
+        height: 58,
         child: Stack(
           clipBehavior: Clip.none,
           children: [
             Positioned(
-              left: 24,
-              bottom: 8,
+              left: 35,
+              bottom: 2,
               child: IconButton(
                 color: unselectedColor,
                 onPressed: () {
@@ -52,13 +52,13 @@ class _BottomBarState extends State<BottomBar> {
                           status.isCollapsed
                       ? selectedColor
                       : unselectedColor,
-                  size: 40,
+                  size: 36,
                 ),
               ),
             ),
             Positioned(
-              right: 24,
-              bottom: 8,
+              right: 35,
+              bottom: 2,
               child: IconButton(
                 color: unselectedColor,
                 onPressed: () {
@@ -74,16 +74,16 @@ class _BottomBarState extends State<BottomBar> {
                           status.isCollapsed
                       ? selectedColor
                       : unselectedColor,
-                  size: 40,
+                  size: 36,
                 ),
               ),
             ),
             Positioned(
-              bottom: 18,
+              bottom: 13,
               left: 0,
               right: 0,
               child: Container(
-                height: 64,
+                height: 50,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   color: status.isOpened ? selectedColor : unselectedColor,
@@ -91,7 +91,7 @@ class _BottomBarState extends State<BottomBar> {
                 ),
                 child: IconButton(
                   icon: Padding(
-                    padding: const EdgeInsets.all(12),
+                    padding: const EdgeInsets.all(7),
                     child: Image.asset('assets/images/arrows_icon.png'),
                   ),
                   onPressed: () {

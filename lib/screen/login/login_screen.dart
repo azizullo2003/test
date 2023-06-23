@@ -14,7 +14,7 @@ class LoginScreen extends StatelessWidget {
 
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
+        padding: const EdgeInsets.symmetric(horizontal: 22),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,7 +37,13 @@ class LoginScreen extends StatelessWidget {
                     children: [
                       TextButton(
                         //TODO: sighnup screen
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(
+                              builder: (context) => const SignUpScreen(),
+                            ),
+                          );
+                        },
                         child: const Text(
                           'signup',
                           style: TextStyle(
@@ -74,7 +80,7 @@ class LoginScreen extends StatelessWidget {
                           ),
                         );
                       },
-                      child: Text('login').tr(),
+                      child: const Text('login').tr(),
                     ),
                   )
                 ],

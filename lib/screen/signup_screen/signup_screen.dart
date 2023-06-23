@@ -67,10 +67,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
       ),
       backgroundColor: Colors.white,
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
               'Sign up',
@@ -79,51 +79,57 @@ class _SignUpScreenState extends State<SignUpScreen> {
             Expanded(
               flex: 1,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: SizedBox(
-                        width: 165,
-                        child: TextButton(
-                          onPressed: () {
-                            //Здесь меняем переменную цвета кнопки внутри state
-                            setState(() {
-                              index = 0;
-                            });
-                          },
-                          style: ElevatedButton.styleFrom(
-                            //Здесь указывается, что для цвета нужно взять переменную
-                            backgroundColor:
-                                index == 0 ? disableColor : enableColor,
-                          ),
-                          child: const Text(
-                            'Email',
-                            style: TextStyle(fontSize: 14, color: Colors.black),
-                          ),
-                        ),
-                      )),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: SizedBox(
-                        width: 166,
-                        child: TextButton(
-                          onPressed: () {
-                            //Здесь меняем переменную цвета кнопки внутри state
-                            setState(() {
-                              index = 1;
-                            });
-                          },
-                          style: ElevatedButton.styleFrom(
-                            //Здесь указывается, что для цвета нужно взять переменную
-                            backgroundColor:
-                                index == 1 ? disableColor : enableColor,
-                          ),
-                          child: const Text(
-                            'Phone Number',
-                            style: TextStyle(fontSize: 14, color: Colors.black),
+                  Expanded(
+                    child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SizedBox(
+                          width: 165,
+                          child: TextButton(
+                            onPressed: () {
+                              //Здесь меняем переменную цвета кнопки внутри state
+                              setState(() {
+                                index = 0;
+                              });
+                            },
+                            style: ElevatedButton.styleFrom(
+                              //Здесь указывается, что для цвета нужно взять переменную
+                              backgroundColor:
+                                  index == 0 ? disableColor : enableColor,
+                            ),
+                            child: const Text(
+                              'Email',
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.black),
+                            ),
                           ),
                         )),
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: SizedBox(
+                          width: 166,
+                          child: TextButton(
+                            onPressed: () {
+                              //Здесь меняем переменную цвета кнопки внутри state
+                              setState(() {
+                                index = 1;
+                              });
+                            },
+                            style: ElevatedButton.styleFrom(
+                              //Здесь указывается, что для цвета нужно взять переменную
+                              backgroundColor:
+                                  index == 1 ? disableColor : enableColor,
+                            ),
+                            child: const Text(
+                              'Phone Number',
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.black),
+                            ),
+                          )),
+                    ),
                   ),
                 ],
               ),
@@ -308,7 +314,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: IntlPhoneField(
                                   dropdownIconPosition: IconPosition.trailing,
-                                  initialCountryCode: 'IN',
+                                  initialCountryCode: 'RU',
                                   onChanged: (phone) {
                                     print(phone.completeNumber);
                                   },
